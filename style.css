@@ -1,0 +1,160 @@
+.elementor-widget-counter:hover .elementor-counter-number-wrapper {
+    color: #fff !important
+}
+			
+.elementor-widget-counter:hover .elementor-counter-title {
+    color: #fff !important
+}
+.abouticons   img{
+	max-width: fit-content !important;
+}
+p {
+  margin-bottom: 0 !important;
+}
+
+.service .elementor-image-box-img{
+    height: 350px;
+    overflow: hidden;
+    box-shadow: 8px 8px 15px #3333333b;
+}
+.service .elementor-image-box-img img { 
+    object-position: top;
+    height: 100%;
+    object-fit: cover;
+}
+.service .elementor-image-box-title{
+	position:relative;
+}
+.service .elementor-image-box-title::after {
+    position: absolute;
+    content: "";
+    background: #e45826;
+    width: 45px;
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+	 animation-name: line;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+@keyframes line {
+	to{
+		width:10px;
+	}
+	
+}
+.posCenter{
+	position:absolute;
+	bottom:50%;
+	transform:translateY(50%) rotate(0deg); 
+	transform-origin:center center;
+	animation-name: rotate;
+  animation-duration: 60s; 
+  animation-timing-function: ease-out;  
+  animation-direction: reverse;
+  animation-iteration-count: infinite;  
+ -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes rotate {
+	to{
+	transform:translateY(50%) rotate(-290deg); 
+ 
+}
+}
+	.sideline{
+		position:relative
+	}	
+.sideline .linetext {
+    position: absolute;
+    height:90%;
+    width: 55px;
+    transform: translate(-8%, 50%);
+    display: block;
+    bottom: 50%;
+    left: 8%;
+}
+.sideline .linetext::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #cacaca;
+    bottom: 0;
+    left: -6px;
+    border-radius: 50%;
+}
+.sideline .linetext::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    /* border-left: 1px dashed #5151514d; */
+    position: absolute;
+    left: 0;
+    background-image: url(https://codexcode.org/victorytimeintl/wp-content/uploads/2022/08/dashed.svg);
+    background-repeat-x: no-repeat;
+    background-size: contain;
+}
+.sideline .linetext span::before {
+    font-size: 70px;
+    color: #cacaca; 
+    font-weight: 600; 
+    font-family: "Lato", Sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+} 
+.sideline .linetext span {
+    position: absolute;
+    left: -135%;
+    transform: rotate(-90deg) translate(-30%, -135%);
+    background: #ffffff;
+    padding-right: 100px;
+}
+#about .linetext span::before{
+	content:'about';
+}
+#services .linetext span::before{
+	content:'services';
+}
+#services .linetext span { 
+    left: -160%;
+    transform: rotate(-90deg) translate(-30%, -160%);
+}
+@media(min-width: 768px){
+	
+	.abouticons .elementor-container::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background: rgba(81, 81, 81, 0.4);
+    bottom: 35%;
+    transform: translateY(35%) scaleX(0.8);
+}
+}
+@media(max-width:767px){
+	.sideline .linetext { 
+    width: 60px;
+    transform: translate(-3%, 50%);
+     
+    left: 3%;
+}
+.sideline .linetext span {
+    left: -50%;
+    transform: rotate(-90deg) translate(-30%, -50%);
+    padding-right: 0px;
+}
+	.sideline .linetext span::before {
+    font-size: 35px; 
+}
+	#services .linetext span {
+    left: -68%;
+    transform: rotate(-90deg) translate(-30%, -68%);
+}
+}

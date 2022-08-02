@@ -184,6 +184,7 @@
 // });
 
 // scroll
+// scroll
 	var scrollEffect = function() {
 		$(window).scroll(function(){
 			var $w = $(this),
@@ -200,14 +201,14 @@
 					navbar.removeClass('stickyCart  ');
 				}
 			} 
-			if ( st > 350 ) {
+			if ( st > 750 ) {
 				if ( !navbar.hasClass('visible') ) {
 					navbar.addClass('visible');	
 				}
 				
 				 
 			}
-			if ( st < 350 ) {
+			if ( st < 750 ) {
 				if ( navbar.hasClass('visible') ) {
 					navbar.removeClass('visible'); 
 				}
@@ -216,4 +217,5 @@
 		});
 	};
 	scrollEffect();
+ 
 </script>

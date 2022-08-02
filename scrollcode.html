@@ -91,13 +91,13 @@
 }
  
 
-#masthead.moveTop.visible {
+#masthead.stickyCart.visible {
     margin-top: 0px;
     -webkit-transition: .3s all ease-out;
     -o-transition: .3s all ease-out;
     transition: .3s all ease-out;
 }
-#masthead.moveTop {
+#masthead.stickyCart {
     position: fixed;
     right: 0;
     left: 0;
@@ -183,20 +183,21 @@
     
 // });
 
-var scrollEffect = function() {
+// scroll
+	var scrollEffect = function() {
 		$(window).scroll(function(){
 			var $w = $(this),
 					st = $w.scrollTop(),
-					navbar = $('#masthead'), 
+					navbar = $('#masthead'); 
 
 			if (st > 150) {
-				if ( !navbar.hasClass('moveTop') ) {
-					navbar.addClass('moveTop');	
+				if ( !navbar.hasClass('stickyCart') ) {
+					navbar.addClass('stickyCart');	
 				}
 			} 
 			if (st < 150) {
-				if ( navbar.hasClass('moveTop') ) {
-					navbar.removeClass('moveTop  ');
+				if ( navbar.hasClass('stickyCart') ) {
+					navbar.removeClass('stickyCart  ');
 				}
 			} 
 			if ( st > 350 ) {
@@ -215,5 +216,4 @@ var scrollEffect = function() {
 		});
 	};
 	scrollEffect();
-
 </script>
